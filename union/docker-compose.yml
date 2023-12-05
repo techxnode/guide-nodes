@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  node:
+    container_name: union-node
+    image: ghcr.io/unionlabs/uniond:${UNIOND_VERSION}
+    volumes:
+      - ~/.union:/.union
+      - /tmp:/tmp
+    network_mode: "host"
+    restart: unless-stopped
+    command: start --home /.union
+    ports:
+      - 26657:26657
+      - 1317:1317
+      - 9093:9093
