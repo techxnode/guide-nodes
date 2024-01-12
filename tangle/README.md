@@ -81,7 +81,8 @@ Next, insert our key received from the validation button, choose the commission 
 ![Alt text](./images/image-2.png)
 
 As soon as you get a place among the validators, you will appear in the <b>Staking Overview</b> tab, but for now you can find yourself on the <b>Waiting</b> tab
-###Check Logs
+
+### Check Logs
 ```bash
 journalctl -u tangle -f -o cat
 ```
